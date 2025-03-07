@@ -130,7 +130,7 @@ const part2_2 = async () => {
     }
 }
 
-const part2_3 = async (operation) => {
+const part2_3 = async (operation, rotation) => {
     // I've found intermittent CORS errors, so I used catch without throwing.
     let complete = false;
     while (!complete) {
@@ -159,6 +159,7 @@ const part2_3 = async (operation) => {
                     const cardImg = document.createElement('img');
                     cardImg.src = data.image;
                     cardImg.classList.add('card');
+                    cardImg.style.transform = `rotate(${rotation}deg)`;
                     output2_3.append(cardImg);
                     break;
             }
@@ -190,15 +191,17 @@ const drawDeck = document.querySelector('button#draw');
 newDeck.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('new deck')
-    part2_3('new deck');
+    part2_3('new deck', pickANumber() * .1);
 });
+
 shuffleDeck.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('shuffled')
-    part2_3('shuffle');
+    part2_3('shuffle', pickANumber() * .1);
 });
+
 drawDeck.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('draw a card')
-    part2_3('draw');
+    part2_3('draw', (pickANumber() * .1) - 5);
 });
