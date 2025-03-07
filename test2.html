@@ -31,12 +31,22 @@
         <h4>2) Draw two cards from the same newly shuffled deck in sequence (one after the first)</h4>
         <div id="part2_2"></div>
         <h4>3) Draw a single card from a deck and show it</h4>
-        <div id="button_group">
-            <button id="new">New</button>
-            <button id="shuffle">Shuffle</button>
-            <button id="draw">Draw</button>
-        </div>
+
         <div id="part2_3"></div>
+        <div class="container">
+            <div class="header">
+                <div id="button_group">
+                    <button id="new">New Deck</button>
+                    <button id="shuffle">Shuffle</button>
+                    <button id="draw">Draw</button>
+                </div>
+            </div>
+            <div id="part2_3_deck" class="menu"></div>
+            <div id="part2_3_pile" class="content"></div>
+            <div class="footer">
+                <h2 id="part2_3_message"></h2>
+            </div>
+        </div>
     </section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="test2.js"></script>
