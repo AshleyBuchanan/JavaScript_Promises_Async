@@ -68,6 +68,7 @@ const part1_3 = async (number) => {
             li.innerText = `${data}`;
             output1_3.append(li);
         });
+        return facts;
     } catch (error) {
         console.error(`Error in part1_3 function: ${error}`);
     }
@@ -227,12 +228,19 @@ shuffleDeck.addEventListener('click', (event) => part2_3('shuffle', Math.random(
 drawDeck.addEventListener('click', (event) => part2_3('draw', Math.random() * 10 - 5));
 //tests
 const pickANumber = () => Math.floor(Math.random() * 100);
-console.log(part1_1(pickANumber()));
-console.log(part1_2([pickANumber(), pickANumber()]));
-console.log(part1_3(pickANumber()));
+console.log('1_1', part1_1(pickANumber()));
+console.log('1_2', part1_2([pickANumber(), pickANumber()]));
+console.log('1_3', part1_3(pickANumber()));
 part2_1();
 part2_2();
 
 let currentDeck;
 let cards_left = 52;
 part2_3('new deck');
+
+// This exercise got a little out of hand. Honestly, I was just having too much fun.
+// All of the requirements should be met, though. Logs and Errors are in the console.
+// With the card api, I had quite a few CORS throws, so I removed error messages in 
+// their catches. I felt that fault-tolerance was more important than user-awareness.
+// It was intermittent, so I just created a while loop to request again and again.
+// Yes. I'm aware that if CORS throws infinitely, there'll be an endless loop.
