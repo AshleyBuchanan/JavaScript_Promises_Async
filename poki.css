@@ -1,12 +1,22 @@
-#myProgress {
-    width: 90%;
-    background-color: grey;
+#centered {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
 }
 
-#pokidex-bar {
-    width: 1%;
-    height: 30px;
-    background-color: green;
+#card-holder {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #header {
@@ -29,4 +39,44 @@
     height: 50px;
     align-items: center;
     justify-content: center;
+}
+
+#myProgress {
+    width: 90%;
+    background-color: grey;
+}
+
+#pokedex-bar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 600px;
+    padding: 10px;
+    background-color: rgb(255, 219, 102);
+    border: 6.5px solid rgb(64, 111, 191);
+    border-radius: 4px;
+    box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.254);
+    text-align: center;
+
+}
+
+.card-name {
+    margin: 5px;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.card-image {
+    zoom: 200%;
+    margin: auto;
+}
+
+.card-flavor {
+    margin-top: auto;
 }

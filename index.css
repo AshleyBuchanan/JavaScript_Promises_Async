@@ -49,14 +49,10 @@ button {
     background-color: #768d87;
     border-radius: 3px;
     border: 1px solid #566963;
-    /* display: inline-block; */
-    /* cursor: pointer; */
     color: #ffffff;
     font-family: Arial;
-    /* font-size: 15px; */
     font-weight: bold;
     padding: 10px 20px;
-    /* text-decoration: none; */
     text-shadow: 0px -1px 0px #2b665e;
     transition: all 200ms;
 }
